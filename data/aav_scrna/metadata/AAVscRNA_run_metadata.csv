@@ -1,0 +1,5 @@
+run,organism,tissue,condition
+SRR16502301,mouse,brain_1,normal
+SRR16502302,mouse,brain_2,normal
+SRR16502308,mouse,brain_1,targeted
+SRR16502309,mouse,brain_2,targeted

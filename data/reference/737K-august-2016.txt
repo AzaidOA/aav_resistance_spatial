@@ -1,0 +1,1 @@
+/export/storage/users/azaid/bin/cellranger-9.0.1/lib/python/cellranger/barcodes/737K-august-2016.txt
