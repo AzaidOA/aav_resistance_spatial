@@ -69,3 +69,11 @@ for sample in $samples; do
   
   echo "Submitted job for sample ${sample}."
 done
+
+# Step 5: Run scds filtering to remove doublets.
+source ~/.bashrc
+mamba activate scds_env
+Rscript "${scripts_main}/scds_doublets.R" \
+  --base_path "${main_work}/work" \
+  --fig_dir "${main_data}/work" \
+  --samples "$(echo "$samples" | head -n 2 | paste -s -d ',')"
