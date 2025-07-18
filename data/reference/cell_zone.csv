@@ -1,0 +1,20 @@
+Cell_class,Cell_subclass,Cell_zone
+Ventricular cells,Ependymal cells,Not cortex or hippocampus
+Neurons,Telencephalon inhibitory neurons,Cortex
+Astrocytes and olfactory ensheathing cells,Astrocytes,Cortex and hippocampus
+Oligodendrocytes,Oligodendrocytes,Cortex and hippocampus
+Neurons,Di- and mesencephalon neurons,Not cortex or hippocampus
+Neurons,Cerebral nuclei neuroblasts,Not cortex or hippocampus
+Neurons,"Cholinergic, monoaminergic, peptidergic neurons",Not cortex or hippocampus
+Microglia,Microglia,Cortex and hippocampus
+Vascular cells,Endothelial cells,Not cortex or hippocampus
+Oligodendrocytes,Oligodendrocyte precursor cells,Cortex and hippocampus
+Ventricular cells,Choroid plexus epithelial cells,Not cortex or hippocampus
+Vascular cells,Vascular and leptomeningeal cells,Not cortex or hippocampus
+Neurons,Telencephalon excitatory neurons,Cortex
+Neurons,Rhombencephalon neurons,Not cortex or hippocampus
+Neurons,Olfactory bulb inhibitory neurons,Not cortex or hippocampus
+Neurons,Dentate gyrus granule neurons,Hippocampus
+Ventricular cells,Hypendymal cells,Not cortex or hippocampus
+Neurons,Olfactory bulb excitatory neurons,Not cortex or hippocampus
+Astrocytes and olfactory ensheathing cells,Olfactory ensheathing cells,Not cortex or hippocampus
