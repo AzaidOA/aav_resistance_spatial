@@ -16,7 +16,8 @@ library(stringr)
 ### --------------------------- Load paths --------------------------- ###
 base_path <- "/export/storage/users/azaid/vallabh_lab/work"
 atlas_path <- "/export/storage/users/azaid/spatial"
-output_path <- "/export/storage/users/azaid/vallabh_lab/work/integrated_analysis_final" # Main output directory
+output_path <- "/home/azaid/vallabh_lab/outs/integrated_analysis"
+srt_out_path <- "/export/storage/users/azaid/vallabh_lab/work/integrated/seurat_obj"
 dir.create(output_path, recursive = TRUE, showWarnings = FALSE)
 
 # Increase memory limit for large objects
@@ -25,7 +26,7 @@ options(future.globals.maxSize = 1000 * 1024^2)
 ### --------------- Data Loading and Preparation --------------- ###
 
 # Load pre-processed Seurat objects
-aav_obj <- readRDS(file.path(base_path, "integrated", "seurat_obj", "aav_annotated_filtered_seurat.rds"))
+aav_obj <- readRDS(file.path(srt_out_path, "aav_annotated_filtered_seurat.rds"))
 snrna_obj <- readRDS(file.path(atlas_path, "processed", "mouseBrain.snRNAseq.308Clusters.seurat.20241021.rds"))
 
 # Load additional metadata to filter by brain region
@@ -105,7 +106,7 @@ p2 <- DimPlot(combined_obj, reduction = "umap", group.by = "AAV_status", pt.size
 ggsave(file.path(output_path, "exploratory_umap_by_aav_status.pdf"), plot = p2, width = 8, height = 6)
 
 # Save the integrated object
-saveRDS(combined_obj, file = file.path(output_path, "full_integrated_object.rds"))
+saveRDS(combined_obj, file = file.path(srt_out_path, "full_integrated_seurat.rds"))
 
 # Clean up memory
 rm(combined_obj); gc()
@@ -148,6 +149,6 @@ predictions <- TransferData(
 snrna_obj_filtered <- AddMetaData(snrna_obj_filtered, metadata = predictions)
 
 # Save the final annotated object
-saveRDS(snrna_obj_filtered, file = file.path(output_path, "snrna_atlas_annotated_with_aav_status.rds"))
+saveRDS(snrna_obj_filtered, file = file.path(srt_out_path, "snrna_annotated_aav_status_seurat.rds"))
 
 cat("Analysis complete. Both the exploratory integrated object and the final annotated atlas have been saved.\n")
